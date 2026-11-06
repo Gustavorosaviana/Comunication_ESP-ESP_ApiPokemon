@@ -5,6 +5,7 @@ Descrição:  Pedindo para a API dados sobre o Pokemon escolhido com base no Id.
 Versão: 0.1
 Data: 05/011/2026
 */
+
 #include <Arduino.h>
 #include <WiFi.h>
 #include <PubSubClient.h>
@@ -32,7 +33,7 @@ Botao btnBaixo(12);
 Botao btnEnter(13);
 
 String nomePokemon = "";
-int pokedex = 1;
+int pokedex = 0;
 String typesPokemon[2] = {"", ""};
 
 WiFiClient wifiClient;
@@ -201,6 +202,10 @@ void telaInicial() {
 
     lcd.setCursor(0, 2);
     lcd.print("ENTER = CONFIRMAR   ");
+
+
+    lcd.setCursor(0,3);
+    lcd.print("                   ");
 }
 //* =====================================================================
 
